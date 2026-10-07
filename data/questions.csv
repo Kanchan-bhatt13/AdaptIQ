@@ -1,0 +1,162 @@
+question_id,question,option_a,option_b,option_c,option_d,correct_answer,topic,difficulty
+Q001,What is the output of print(2 + 3)?,6,23,Error,5,D,Variables,Easy
+Q002,Which is a valid variable name in Python?,my var,my-var,my_var,1var,C,Variables,Easy
+Q003,What is type(3.14)?,int,double,str,float,D,Variables,Easy
+Q004,Which symbol starts a single-line comment in Python?,//,--,#,/*,C,Variables,Easy
+Q005,What does the statement x = 5 do?,Compares x with 5,Declares x as a constant,Prints 5,Assigns 5 to x,D,Variables,Easy
+Q006,What is the output of print(7 // 2)?,3.5,3.0,4,3,D,Variables,Medium
+Q007,What is the output of print(type(10 / 2))?,<class 'str'>,<class 'int'>,<class 'float'>,<class 'double'>,C,Variables,Medium
+Q008,"a, b = 1, 2
+a, b = b, a
+print(a, b)",1 2,1 1,2 1,2 2,C,Variables,Medium
+Q009,What is the output of print(2 ** 3 ** 2)?,512,36,64,128,A,Variables,Medium
+Q010,"x = '5'
+print(x * 2)",Error,5 2,55,10,C,Variables,Medium
+Q011,"a = [1, 2]
+b = a
+b.append(3)
+print(a)",[3],"[1, 2]",Error,"[1, 2, 3]",D,Variables,Hard
+Q012,What is the output of print(0.1 + 0.2 == 0.3)?,None,Error,True,False,D,Variables,Hard
+Q013,"x = 10
+def f():
+    print(x)
+x = 20
+f()
+What is printed?",None,10,20,Error,C,Variables,Hard
+Q014,What is the output of print(bool('False'))?,Error,None,False,True,D,Variables,Hard
+Q015,What is the output of print(-7 // 2)?,-4,-3,3,-3.5,A,Variables,Hard
+Q016,How many times does for i in range(5) iterate?,0,5,6,4,B,Loops,Easy
+Q017,Which keyword exits a loop immediately?,continue,exit,pass,break,D,Loops,Easy
+Q018,"What does range(1, 4) produce?","1, 2, 3, 4","2, 3, 4","1, 2, 3","0, 1, 2, 3",C,Loops,Easy
+Q019,Which loop is best when the number of iterations is not known in advance?,if,for with a list,for with range,while,D,Loops,Easy
+Q020,What is the first value printed by for i in range(3): print(i)?,0,1,3,2,A,Loops,Easy
+Q021,"s = 0
+for i in range(1, 5):
+    s += i
+print(s)",10,6,4,15,A,Loops,Medium
+Q022,Which keyword skips the rest of the current iteration?,continue,skip,pass,break,A,Loops,Medium
+Q023,"for i in range(10, 0, -3):
+    print(i, end=' ')",10 7 4,10 7 4 1 0,9 6 3,10 7 4 1,D,Loops,Medium
+Q024,"x = 0
+while x < 3:
+    x += 1
+print(x)",4,0,3,2,C,Loops,Medium
+Q025,When does the else clause of a for loop run?,Before the loop starts,When the loop finishes without break,When the loop is broken,Only if the loop never runs,B,Loops,Medium
+Q026,"for i in range(3):
+    for j in range(i):
+        print('*', end='')
+How many * are printed in total?",6,2,3,4,C,Loops,Hard
+Q027,What is the output of print(sum(i for i in range(10) if i % 3 == 0))?,15,27,12,18,D,Loops,Hard
+Q028,"count = 0
+for i in range(5):
+    if i == 3:
+        break
+    count += 1
+else:
+    count += 10
+print(count)",13,15,3,5,C,Loops,Hard
+Q029,What is the time complexity of two nested loops that each run n times?,O(2n),O(n),O(n^2),O(log n),C,Loops,Hard
+Q030,"i = 0
+while i < 5:
+    i += 2
+    if i == 4:
+        continue
+    print(i, end=' ')",2 6,2 4 6,2 4,6,A,Loops,Hard
+Q031,Which keyword defines a function in Python?,function,def,define,func,B,Functions,Easy
+Q032,"def f():
+    return 5
+print(f())",5,Error,f,None,A,Functions,Easy
+Q033,What does a function without a return statement return?,None,0,An empty string,Error,A,Functions,Easy
+Q034,How do you call a function named greet?,call greet,def greet(),greet(),greet,C,Functions,Easy
+Q035,Values passed to a function when it is called are known as:,Classes,Modules,Arguments,Comments,C,Functions,Easy
+Q036,"def f(a, b=2):
+    return a * b
+print(f(3))",3,Error,5,6,D,Functions,Medium
+Q037,"def f(*args):
+    return len(args)
+print(f(1, 2, 3))",1,3,Error,6,B,Functions,Medium
+Q038,"f = lambda x: x * 2
+print(f(4))",8,16,6,Error,A,Functions,Medium
+Q039,"def f(**kw):
+    return kw
+print(f(a=1))",(a=1),{'a': 1},Error,[1],B,Functions,Medium
+Q040,Which keyword lets a function modify a global variable?,extern,nonlocal,static,global,D,Functions,Medium
+Q041,"def f(x, lst=[]):
+    lst.append(x)
+    return lst
+f(1)
+print(f(2))",Error,[2],"[1, 2]",[1],C,Functions,Hard
+Q042,"def outer():
+    x = 1
+    def inner():
+        nonlocal x
+        x += 1
+    inner()
+    return x
+print(outer())",Error,1,2,None,C,Functions,Hard
+Q043,"def fact(n):
+    return 1 if n <= 1 else n * fact(n - 1)
+print(fact(5))",720,24,5,120,D,Functions,Hard
+Q044,What does a decorator do?,Compiles the code,Wraps a function to extend its behaviour,Declares a variable type,Deletes a function,B,Functions,Hard
+Q045,"def gen():
+    yield 1
+    yield 2
+print(list(gen()))",[2],"[1, 2]",<generator>,1,B,Functions,Hard
+Q046,Which keyword creates a class?,object,class,struct,def,B,OOP,Easy
+Q047,An object is:,A module,A function,A loop,An instance of a class,D,OOP,Easy
+Q048,What is the constructor method named in Python?,__new_class__,init,__init__,constructor,C,OOP,Easy
+Q049,What does self refer to inside a method?,A global variable,The current instance,The class name,The parent class,B,OOP,Easy
+Q050,Which OOP principle hides internal details of an object?,Inheritance,Polymorphism,Recursion,Encapsulation,D,OOP,Easy
+Q051,"class A: pass
+class B(A): pass
+print(issubclass(B, A))",None,False,Error,True,D,OOP,Medium
+Q052,How does a child class call its parent's __init__?,parent.__init__(),self.super(),base(),super().__init__(),D,OOP,Medium
+Q053,A child method with the same name as a parent method replaces it. This is called:,Overriding,Slicing,Encapsulation,Overloading,A,OOP,Medium
+Q054,Which decorator defines a method that receives the class (cls) instead of an instance?,@classmethod,@property,@abstractmethod,@staticmethod,A,OOP,Medium
+Q055,What happens to an attribute named __x inside a class?,It becomes constant,Name mangling,Compile error,It is deleted,B,OOP,Medium
+Q056,"class A:
+    def f(self): return 'A'
+class B(A): pass
+class C(A):
+    def f(self): return 'C'
+class D(B, C): pass
+print(D().f())",C,None,A,Error,A,OOP,Hard
+Q057,"class A:
+    x = 1
+a1 = A(); a2 = A()
+A.x = 5
+print(a1.x, a2.x)",5 5,1 1,5 1,Error,A,OOP,Hard
+Q058,Which special method controls what print(obj) shows?,__print__,__show__,__disp__,__str__,D,OOP,Hard
+Q059,What does the @property decorator do?,Makes a class abstract,Makes a method static,Makes an attribute private,Lets a method be accessed like an attribute,D,OOP,Hard
+Q060,"class A:
+    def __init__(self): self.v = 1
+class B(A):
+    def __init__(self): self.w = 2
+print(hasattr(B(), 'v'))",None,False,Error,True,B,OOP,Hard
+Q061,Which of these is mutable?,tuple,str,int,list,D,Data Structures,Easy
+Q062,"What is len([1, 2, 3])?",Error,4,3,2,C,Data Structures,Easy
+Q063,How do you access the first element of list a?,a[1],a.first(),a[0],a(0),C,Data Structures,Easy
+Q064,Which structure stores key-value pairs?,dict,list,set,tuple,A,Data Structures,Easy
+Q065,Which built-in structure does not allow duplicate elements?,str,set,tuple,list,B,Data Structures,Easy
+Q066,"a = [1, 2, 3, 4]
+print(a[1:3])","[2, 3, 4]","[1, 2, 3]","[2, 3]","[1, 2]",C,Data Structures,Medium
+Q067,"What is the output of print(set([1, 2, 2, 3]))?","{1, 2, 2, 3}","[1, 2, 3]","{1, 2, 3}",Error,C,Data Structures,Medium
+Q068,"d = {'a': 1}
+print(d.get('b', 0))",1,None,KeyError,0,D,Data Structures,Medium
+Q069,Which list method removes and returns the last item?,pop(),discard(),remove(),delete(),A,Data Structures,Medium
+Q070,"t = (1, 2, 3)
+t[0] = 9
+What happens?","t becomes (9, 2, 3)",TypeError,"t becomes [9, 2, 3]",Nothing happens,B,Data Structures,Medium
+Q071,What is the average time complexity of a dict lookup?,O(log n),O(n),O(n log n),O(1),D,Data Structures,Hard
+Q072,"a = [3, 1, 2]
+b = sorted(a)
+print(a)","[1, 2, 3]",Error,"[3, 1, 2]",None,C,Data Structures,Hard
+Q073,"s = []
+s.append(1)
+s.append(2)
+s.append(3)
+s.pop()
+s.pop()
+print(s)","[1, 2]","[2, 3]",[1],[3],C,Data Structures,Hard
+Q074,print([x * x for x in range(5) if x % 2 == 0]),"[4, 16]","[0, 4, 16]","[0, 2, 4]","[0, 1, 4, 9, 16]",B,Data Structures,Hard
+Q075,Which structure gives O(1) removal from the front (a queue)?,set,collections.deque,list,tuple,B,Data Structures,Hard
